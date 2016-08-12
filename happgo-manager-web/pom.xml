@@ -4,9 +4,9 @@
 	http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.happgo</groupId>
-    <artifactId>happgo-manager</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+      <groupId>com.happgo</groupId>
+	  <artifactId>happgo-parent</artifactId>
+	  <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>happgo-manager-web</artifactId>
   <packaging>war</packaging>
@@ -14,9 +14,13 @@
   <!-- 依赖管理 -->
 	<dependencies>
 		<dependency>
-			<groupId>com.happgo</groupId>
-			<artifactId>happgo-manager-service</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+		    <groupId>com.happgo</groupId>
+		    <artifactId>happgo-manager-interface</artifactId>
+		    <version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>dubbo</artifactId>
 		</dependency>
 		<!-- JSP相关 -->
 		<dependency>

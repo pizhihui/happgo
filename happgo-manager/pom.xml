@@ -12,8 +12,8 @@
   <modules>
   	<module>happgo-manager-pojo</module>
   	<module>happgo-manager-service</module>
-  	<module>happgo-manager-web</module>
   	<module>happgo-manager-dao</module>
+  	<module>happgo-manager-interface</module>
   </modules>
   
   <dependencies>
