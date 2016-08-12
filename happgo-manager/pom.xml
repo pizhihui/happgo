@@ -15,4 +15,14 @@
   	<module>happgo-manager-service</module>
   	<module>happgo-manager-web</module>
   </modules>
+  
+  <dependencies>
+  	<dependency>
+  		  <groupId>com.happgo</groupId>
+		  <artifactId>happgo-common</artifactId>
+		  <version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
+  
+  
 </project>
