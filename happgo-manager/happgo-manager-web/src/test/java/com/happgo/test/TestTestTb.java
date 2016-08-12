@@ -12,7 +12,7 @@ import com.happgo.dao.TestTbDao;
 import com.happgo.pojo.TestTb;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"classpath:*.xml"})
+@ContextConfiguration(locations={"classpath:applicationContext.xml"})
 public class TestTestTb {
 
 	@Autowired
@@ -28,5 +28,9 @@ public class TestTestTb {
 		tbDao.addTestTb(tb);
 	}
 	
+	@Test
+	public void testService(){
+		
+	}
 	
 }
