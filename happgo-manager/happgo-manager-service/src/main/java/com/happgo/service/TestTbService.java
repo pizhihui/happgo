@@ -2,6 +2,8 @@ package com.happgo.service;
 
 import java.util.List;
 
+import com.happgo.pojo.TestTb;
+
 
 public interface TestTbService {
 

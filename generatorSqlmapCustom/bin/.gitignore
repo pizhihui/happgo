@@ -1,6 +1,3 @@
-/plugins/
-/comment/
-/field/
-/page/
-/rename/
+/GeneratorSqlmap.class
+/log4j.properties
 /org/
