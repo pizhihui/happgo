@@ -12,6 +12,9 @@
 		<!-- genenat entity时,生成toString -->
         <plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
 	
+		<plugin type="com.github.pagehelper.PageHelper">
+			<property name="dialect" value="mysql"/>
+		</plugin>	
 	
 		<!-- 此处是将Example改名为Query 当然 想改成什么都行~    -->      
         <plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">  

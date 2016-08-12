@@ -13,6 +13,10 @@
 	
 	<mvc:annotation-driven></mvc:annotation-driven>
 	
+	<!-- web.xml中配置了 / 拦截所有请求,所以在这里添加静态资源文件映射 -->
+	<mvc:resources location="/WEB-INF/js/" mapping="/js/**"/>
+	<mvc:resources location="/WEB-INF/css/" mapping="/css/**"/>
+	
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
