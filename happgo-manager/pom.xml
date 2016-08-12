@@ -5,15 +5,15 @@
     <artifactId>happgo-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.happgo</groupId>
+  
   <artifactId>happgo-manager</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
+  
   <modules>
   	<module>happgo-manager-pojo</module>
-  	<module>happgo-manager-mapper</module>
   	<module>happgo-manager-service</module>
   	<module>happgo-manager-web</module>
+  	<module>happgo-manager-dao</module>
   </modules>
   
   <dependencies>
