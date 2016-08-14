@@ -41,6 +41,10 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aspects</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+		</dependency>
 		<!-- dubbo依赖的jar包 -->
 		<dependency>
 			<groupId>com.alibaba</groupId>

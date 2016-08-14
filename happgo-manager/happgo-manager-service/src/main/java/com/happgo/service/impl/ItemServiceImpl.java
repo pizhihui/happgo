@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -14,7 +13,7 @@ import com.happgo.pojo.Item;
 import com.happgo.pojo.ItemQuery;
 import com.happgo.service.ItemService;
 
-@Service
+@Service("itemService")
 public class ItemServiceImpl implements ItemService {
 
 	@Autowired
