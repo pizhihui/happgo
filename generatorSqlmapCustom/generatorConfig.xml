@@ -11,10 +11,9 @@
 		
 		<!-- genenat entity时,生成toString -->
         <plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
-	
-		<plugin type="com.github.pagehelper.PageHelper">
-			<property name="dialect" value="mysql"/>
-		</plugin>	
+        
+         <!-- 自定义查询指定字段  -->
+        <plugin type="org.mybatis.generator.plugins.field.FieldsPlugin" />
 	
 		<!-- 此处是将Example改名为Query 当然 想改成什么都行~    -->      
         <plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">  
@@ -30,18 +29,20 @@
 	        <property name="replaceString" value="Dao" />
         </plugin>  
          
-		<!-- 此处是将UserMapper.java改名为UserDao 接口 当然 想改成什么都行~  -->        
+		<!-- 此处是将UserMapper改名为UserDao 接口 当然 想改成什么都行~  -->        
         <plugin type="org.mybatis.generator.plugins.rename.RenameJavaMapperPlugin">  
 	        <property name="searchString" value="Mapper$" />
 	        <property name="replaceString" value="Dao" />
-        </plugin> 
+        </plugin>  
+		
 		<commentGenerator type="org.mybatis.generator.plugins.comment.MyCommentGenerator">
 			<!-- 是否去除自动生成的注释 true：是 ： false:否 
-			<property name="suppressAllComments" value="true" /> -->
+			<property name="suppressAllComments" value="true" />
+			-->
 		</commentGenerator>
 		<!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://123.57.220.183.:3306/happgo" userId="root"
+			connectionURL="jdbc:mysql://123.57.220.183:3306/happgo" userId="root"
 			password="root">
 		</jdbcConnection>
 		<!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL 和 
@@ -49,6 +50,7 @@
 		<javaTypeResolver>
 			<property name="forceBigDecimals" value="false" />
 		</javaTypeResolver>
+		
 
 		<!-- targetProject:生成PO类的位置 -->
 		<javaModelGenerator targetPackage="com.happgo.pojo"
@@ -59,30 +61,30 @@
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
         <!-- targetProject:mapper映射文件生成的位置 -->
-		<sqlMapGenerator targetPackage="com.happgo.mapper" 
+		<sqlMapGenerator targetPackage="com.happgo.dao" 
 			targetProject=".\src">
 			<!-- enableSubPackages:是否让schema作为包的后缀 -->
 			<property name="enableSubPackages" value="false" />
 		</sqlMapGenerator>
 		<!-- targetPackage：mapper接口生成的位置 -->
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="com.happgo.mapper" 
+			targetPackage="com.happgo.dao" 
 			targetProject=".\src">
 			<!-- enableSubPackages:是否让schema作为包的后缀 -->
 			<property name="enableSubPackages" value="false" />
 		</javaClientGenerator>
 		<!-- 指定数据库表 -->
-		<table schema="" tableName="tb_content"></table>
-		<table schema="" tableName="tb_content_category"></table>
-		<table schema="" tableName="tb_item"></table>
-		<table schema="" tableName="tb_item_cat"></table>
-		<table schema="" tableName="tb_item_desc"></table>
-		<table schema="" tableName="tb_item_param"></table>
-		<table schema="" tableName="tb_item_param_item"></table>
-		<table schema="" tableName="tb_order"></table>
-		<table schema="" tableName="tb_order_item"></table>
-		<table schema="" tableName="tb_order_shipping"></table>
-		<table schema="" tableName="tb_user"></table>
+		<table schema="" tableName="tb_content" domainObjectName="Content"></table>
+		<table schema="" tableName="tb_content_category" domainObjectName="ContentCategory"></table>
+		<table schema="" tableName="tb_item" domainObjectName="Item"></table>
+		<table schema="" tableName="tb_item_cat" domainObjectName="ItemCat"></table>
+		<table schema="" tableName="tb_item_desc" domainObjectName="ItemDesc"></table>
+		<table schema="" tableName="tb_item_param" domainObjectName="ItemParam"></table>
+		<table schema="" tableName="tb_item_param_item" domainObjectName="ItemParamItem"></table>
+		<table schema="" tableName="tb_order" domainObjectName="Order"></table>
+		<table schema="" tableName="tb_order_item" domainObjectName="OrderItem"></table>
+		<table schema="" tableName="tb_order_shipping" domainObjectName="OrderShipping"></table>
+		<table schema="" tableName="tb_user" domainObjectName="User"></table>
 
 	</context>
 </generatorConfiguration>

@@ -26,10 +26,11 @@ public class MyCommentGenerator implements CommentGenerator {
 			IntrospectedColumn introspectedColumn) {
 		// TODO Auto-generated method stub
 	    if (introspectedColumn.getRemarks() != null && !introspectedColumn.getRemarks().equals("")) {
-	        field.addJavaDocLine("/**");
-	        field.addJavaDocLine(" * " + introspectedColumn.getRemarks());
+	        //field.addJavaDocLine("/**");
+	        //field.addJavaDocLine(" * " + introspectedColumn.getRemarks());
 	       // addJavadocTag(field, false);
-	        field.addJavaDocLine(" */");
+	        //field.addJavaDocLine(" */");
+	        field.addJavaDocLine("/**" + introspectedColumn.getRemarks() + "*/");
 	    }
 	}
 

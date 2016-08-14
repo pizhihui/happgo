@@ -3,7 +3,7 @@
 
 <mapper namespace="com.happgo.dao.TestTbDao">
 	
-	<insert id="addTestTb" parameterType="TestTb">
+	<insert id="addTestTb" parameterType="TestTb"   >
 		insert into test_tb
 		(id,name,birthday) 
 		values
