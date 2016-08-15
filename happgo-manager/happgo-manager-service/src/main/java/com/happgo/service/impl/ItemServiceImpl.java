@@ -25,6 +25,7 @@ public class ItemServiceImpl implements ItemService {
 		PageHelper.startPage(page, rows);
 		//执行查询
 		ItemQuery itemQuery = new ItemQuery();
+		itemQuery.setOrderByClause("id desc");
 		List<Item> list = itemDao.selectByExample(itemQuery);
 		//取分页信息
 		PageInfo<Item> pageInfo = new PageInfo<>(list);
