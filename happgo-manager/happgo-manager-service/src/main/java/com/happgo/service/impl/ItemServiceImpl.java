@@ -13,7 +13,7 @@ import com.happgo.pojo.Item;
 import com.happgo.pojo.ItemQuery;
 import com.happgo.service.ItemService;
 
-@Service("itemService")
+@Service
 public class ItemServiceImpl implements ItemService {
 
 	@Autowired
