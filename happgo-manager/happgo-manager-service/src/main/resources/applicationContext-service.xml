@@ -22,6 +22,7 @@
 		<dubbo:protocol  name="dubbo" port="20880"/>
 		<!-- 声明需要暴露的服务接口 -->
 		<dubbo:service interface="com.happgo.service.ItemService" ref="itemServiceImpl" timeout="100000"></dubbo:service>	
+		<dubbo:service interface="com.happgo.service.ItemCatService" ref="itemCatServiceImpl" timeout="100000"></dubbo:service>	
 	
 
 </beans>

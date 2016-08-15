@@ -28,6 +28,7 @@
 	<dubbo:registry protocol="zookeeper" address="123.57.220.183:2181" />
 	
 	<dubbo:reference interface="com.happgo.service.ItemService" id="itemServiceClient" />
+	<dubbo:reference interface="com.happgo.service.ItemCatService" id="itemCatServiceClient" />
 	
 	
 	
